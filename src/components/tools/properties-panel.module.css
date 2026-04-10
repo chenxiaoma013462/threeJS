@@ -1,0 +1,128 @@
+.panel {
+  width: 260px;
+  height: 100%;
+  background: #16162a;
+  border-left: 1px solid #2a2a4a;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 16px;
+  font-size: 13px;
+  color: #ddd;
+}
+
+.empty {
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+  padding: 40px 12px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.objectName {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.objectType {
+  font-size: 11px;
+  color: #8888aa;
+  background: #1e1e3a;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.groupTitle {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8888aa;
+}
+
+.vec3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.fieldLabel {
+  font-size: 10px;
+  color: #8888aa;
+  text-align: center;
+}
+
+.fieldInput {
+  width: 100%;
+  padding: 4px 6px;
+  border: 1px solid #2a2a4a;
+  border-radius: 4px;
+  background: #1e1e3a;
+  color: #ddd;
+  font-size: 12px;
+  text-align: center;
+  outline: none;
+  -moz-appearance: textfield;
+}
+
+.fieldInput::-webkit-outer-spin-button,
+.fieldInput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.fieldInput:focus {
+  border-color: #4fc3f7;
+}
+
+.colorRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.colorPicker {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #2a2a4a;
+  border-radius: 4px;
+  background: none;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.colorText {
+  flex: 1;
+  padding: 4px 8px;
+  border: 1px solid #2a2a4a;
+  border-radius: 4px;
+  background: #1e1e3a;
+  color: #ddd;
+  font-size: 12px;
+  font-family: var(--font-geist-mono);
+  outline: none;
+}
+
+.colorText:focus {
+  border-color: #4fc3f7;
+}

@@ -1,0 +1,161 @@
+.panel {
+  width: 240px;
+  height: 100%;
+  background: #16162a;
+  border-right: 1px solid #2a2a4a;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 12px;
+  gap: 16px;
+  font-size: 13px;
+  color: #ddd;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sectionTitle {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #8888aa;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+}
+
+.geoBtn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 8px 4px;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  background: #1e1e3a;
+  color: #ccc;
+  cursor: pointer;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.geoBtn:hover {
+  background: #28284a;
+  border-color: #4fc3f7;
+}
+
+.geoIcon {
+  font-size: 18px;
+}
+
+.geoLabel {
+  font-size: 10px;
+}
+
+.actionBtn {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #2a2a4a;
+  border-radius: 6px;
+  background: #1e1e3a;
+  color: #ccc;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.15s, border-color 0.15s;
+}
+
+.actionBtn:hover {
+  background: #28284a;
+  border-color: #4fc3f7;
+}
+
+.danger {
+  border-color: #553333;
+  color: #ff6b6b;
+}
+
+.danger:hover {
+  background: #331a1a;
+  border-color: #ff6b6b;
+}
+
+.hidden {
+  display: none;
+}
+
+.objectList {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.empty {
+  color: #555;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.objectItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.objectItem:hover {
+  background: #1e1e3a;
+}
+
+.objectItem.selected {
+  background: #252550;
+  outline: 1px solid #4fc3f7;
+}
+
+.colorDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.objectName {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0 4px;
+  line-height: 1;
+}
+
+.deleteBtn:hover {
+  color: #ff6b6b;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
