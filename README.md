@@ -1,36 +1,69 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 3D 可视化工作台
 
-## Getting Started
+基于 Next.js + Three.js 构建的 3D 可视化应用，包含 3D 场景编辑工作台和风洞模拟测试系统。
 
-First, run the development server:
+## 功能模块
+
+### 3D 场景工作台
+- 3D 场景搭建与编辑
+- 工具面板与属性面板
+- 场景对象管理
+
+### 风洞模拟
+- 小米 SU7 车型模型加载
+- 粒子系统模拟气流流动
+- 流线/流光风洞测试视觉效果
+
+## 技术栈
+
+- **框架**: Next.js 15 + React 19
+- **3D 引擎**: Three.js + React Three Fiber + Drei
+- **语言**: TypeScript
+
+## 快速开始
 
 ```bash
+# 安装依赖
+npm install
+
+# 启动开发服务器
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+打开 [http://localhost:3000](http://localhost:3000) 查看 3D 工作台。
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+访问 [http://localhost:3000/wind-tunnel](http://localhost:3000/wind-tunnel) 查看风洞模拟。
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 项目结构
 
-## Learn More
+```
+src/
+├── app/
+│   ├── page.tsx              # 首页 - 3D 工作台
+│   └── wind-tunnel/
+│       └── page.tsx          # 风洞模拟页面
+├── components/
+│   ├── three/                # 3D 场景组件
+│   │   ├── scene-canvas.tsx
+│   │   ├── scene-content.tsx
+│   │   └── three-workbench.tsx
+│   ├── wind-tunnel/          # 风洞模拟组件
+│   │   ├── su7-car-model.tsx
+│   │   ├── wind-particles.tsx
+│   │   └── wind-tunnel-scene.tsx
+│   └── tools/                # 工具面板组件
+│       ├── tool-panel.tsx
+│       └── properties-panel.tsx
+└── types/
+    └── scene.ts              # 场景类型定义
+```
 
-To learn more about Next.js, take a look at the following resources:
+## 构建部署
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+# 构建生产版本
+npm run build
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# 启动生产服务器
+npm start
+```
